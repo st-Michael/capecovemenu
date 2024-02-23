@@ -10,4 +10,5 @@ window.addEventListener('DOMContentLoaded', event => {
 })
 
 
-$('.menuframe').attr('src', 'CapeCoveMenu.pdf#page=1&zoom=100');
+document.querySelector('.menuframe').src = 'CapeCoveMenu.pdf#page=1&zoom=100';
+
