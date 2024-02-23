@@ -11422,11 +11422,13 @@ p {
 
 .intro {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
-    float: right;
   }
   .intro .intro-text {
     left: 0;
@@ -11490,4 +11492,13 @@ p {
   font-size: 1.2rem;
 }
 
-.pdfobject-container { height: 500px; border: 1px solid #ccc; }
+.menuframe{
+  width: 100%;
+  height: 75vh;
+  scroll-behavior: smooth;
+  scrollbar-width: 5px;
+  scroll-margin: 10px;
+  border: 2px solid white ;
+  padding: 10px;
+  border-radius: 30px;
+}
