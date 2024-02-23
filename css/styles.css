@@ -653,12 +653,12 @@ progress {
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
+    
   }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
+    
   }
 }
 @media (min-width: 1400px) {
@@ -11504,10 +11504,14 @@ p {
 }
 
 canvas {
+  position: relative;
+  top: 250px;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.03);
+  width: 70vw;
+ 
 }
 
 .pdf-container {
@@ -11515,7 +11519,7 @@ canvas {
   flex-direction: column;
   gap: 20px;
   width: min-content;
-  height: 100vh; /* Adjust height as needed */
+  height: 70vh; /* Adjust height as needed */
   overflow-y: auto;
   background-color: #f0f0f0;
   padding: 20px;
