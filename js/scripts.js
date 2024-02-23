@@ -8,3 +8,6 @@ window.addEventListener('DOMContentLoaded', event => {
     const listHoursArray = document.body.querySelectorAll('.list-hours li');
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
+
+
+$('.menuframe').attr('src', 'CapeCoveMenu.pdf#page=1&zoom=100');
