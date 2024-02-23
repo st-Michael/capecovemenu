@@ -11500,5 +11500,23 @@ p {
   scroll-margin: 10px;
   border: 2px solid white ;
   padding: 10px;
-  border-radius: 30px;s
+  border-radius: 30px;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: min-content;
+  height: 100vh; /* Adjust height as needed */
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
 }
