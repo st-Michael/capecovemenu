@@ -635,20 +635,19 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 @media (min-width: 576px) {
   .container-sm, .container {
-    max-width: 540px;
+  
   }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+   
   }
 }
 @media (min-width: 992px) {
@@ -658,12 +657,12 @@ progress {
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    
+  
   }
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    
   }
 }
 .row {
@@ -11505,8 +11504,8 @@ p {
 
 canvas {
   position: relative;
-  top: 250px;
-  display: block;
+  top: 180px;
+  display: flex;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.03);
@@ -11519,8 +11518,10 @@ canvas {
   flex-direction: column;
   gap: 20px;
   width: min-content;
-  height: 70vh; /* Adjust height as needed */
+  height: 80vh; /* Adjust height as needed */
   overflow-y: auto;
   background-color: #f0f0f0;
   padding: 20px;
+  align-items: center;
+  justify-content: center;
 }
