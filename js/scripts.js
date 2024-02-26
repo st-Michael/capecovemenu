@@ -12,3 +12,44 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 
+const pdfUrl = 'CapeCoveMenu.pdf';
+const container = document.querySelector('.pdf-container');
+
+// Load PDF document
+pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+    // Array to store all page render promises
+    const pageRenderPromises = [];
+
+    // Loop through each page
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        // Create canvas element for each page
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+
+        // Append canvas to container
+        container.appendChild(canvas);
+
+        // Load page and render
+        const pageRenderPromise = pdf.getPage(pageNum).then(page => {
+            const viewport = page.getViewport({ scale: 1.0 });
+            canvas.width = 600;
+            canvas.height = 650;
+
+            // Render PDF page into canvas context
+            page.render({
+                canvasContext: context,
+                viewport: viewport
+            });
+        });
+
+        // Add page render promise to array
+        pageRenderPromises.push(pageRenderPromise);
+    }
+
+    // Wait for all page render promises to resolve
+    Promise.all(pageRenderPromises).then(() => {
+        console.log('All pages rendered');
+    });
+}).catch(error => {
+    console.error('Error loading PDF:', error);
+});
